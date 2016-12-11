@@ -33,6 +33,7 @@ namespace Farmacia.Gui
 
         public void Activate()
         {
+            
             foreach (var w in m_Window.MdiChildren)
             {
                 if (w.GetType() == m_Type)
@@ -43,7 +44,15 @@ namespace Farmacia.Gui
             }
             Activity activity = Activator.CreateInstance(m_Type) as Activity;
             activity.MdiParent = m_Window;
-            activity.Show();
+            try
+            {
+                activity.Show();
+            }
+            finally
+            {
+
+            }
+          
         }
     }
 }

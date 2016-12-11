@@ -24,17 +24,17 @@ namespace Farmacia.Gui
             entity.Descripcion = "";
             entity.Especificaciones = "";
             entity.Precio = 0.0m;
-            Load();
+            LoadEntity();
         }
         //Constructor para editar
         public ProductoDialog(Data.Producto record)
         {
             InitializeComponent();
             entity = record;
-            Load();
+            LoadEntity();
         }
 
-        private void Load()
+        private void LoadEntity()
         {
             cmbCategoria.DataSource = Data.Default.Db.USPCATEGORIASELECCIONAR<RecordSet>().ToDataTable();
             cmbMarca.DataSource = Data.Default.Db.USPMARCASELECCIONAR<RecordSet>().ToDataTable();

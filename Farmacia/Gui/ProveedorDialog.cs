@@ -20,17 +20,17 @@ namespace Farmacia.Gui
             entity.Telefono = "";
             entity.Contacto = "";
             entity.Email = "";
-            Load();
+            LoadEntity();
         }
 
         public ProveedorDialog(Data.Proveedor record)
         {
             InitializeComponent();
             entity = record;
-            Load();
+            LoadEntity();
         }
 
-        private void Load()
+        private void LoadEntity()
         {
             txtNombre.Text = entity.Nombre;
             txtDireccion.Text = entity.Direccion;

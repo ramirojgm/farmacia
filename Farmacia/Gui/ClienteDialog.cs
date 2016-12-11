@@ -20,17 +20,17 @@ namespace Farmacia.Gui
             entity.Direccion = "";
             entity.NTelefono = "";
             entity.NCedula = "";
-            Load();
+            LoadEntity();
         }
         //Constructor para editar
         public ClienteDialog(Data.Cliente record)
         {
             InitializeComponent();
             entity = record;
-            Load();
+            LoadEntity();
         }
 
-        private void Load()
+        private void LoadEntity()
         {
             txtNombre.Text = entity.Nombre;
             txtDireccion.Text = entity.Direccion;
