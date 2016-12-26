@@ -13,6 +13,8 @@ namespace Farmacia.Gui
         public ProductoLote()
         {
             InitializeComponent();
+            dgvDetalle.AutoGenerateColumns = false;
+            dgvProducto.AutoGenerateColumns = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -31,6 +33,28 @@ namespace Farmacia.Gui
                 Data.ProductoLote plote = ((BindingList<Data.ProductoLote>) dgvProducto.DataSource)[e.RowIndex];
                 dgvDetalle.DataSource = plote.Detalle;
             }
+        }
+
+        private void productRowUpdate()
+        {
+            foreach (Data.ProductoLote producto in (IEnumerable<Data.ProductoLote>) dgvProducto.DataSource)
+            {
+                decimal cantidad = 0,subtotal = 0;
+                foreach(Data.Lote lote in producto.Detalle)
+                {
+                    cantidad += lote.Cantidad;
+                    subtotal += lote.Precio * lote.Cantidad;
+                }
+                producto.Cantidad = cantidad;
+                if(cantidad > 0)
+                    producto.Precio = subtotal / cantidad;
+            }
+        }
+
+        private void dgvDetalle_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            productRowUpdate();
+            dgvDetalle.Update();
         }
     }
 }

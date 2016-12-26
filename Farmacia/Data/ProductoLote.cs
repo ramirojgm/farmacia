@@ -15,6 +15,7 @@ namespace Farmacia.Data
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
         public decimal Cantidad { get; set; }
+        public decimal Subtotal { get { return Precio * Cantidad; } }
         public BindingList<Lote> Detalle = new BindingList<Lote>();
 
         public static BindingList<ProductoLote> Get()

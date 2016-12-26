@@ -109,8 +109,10 @@
             this.colDescripcion,
             this.colIdProducto});
             this.dgvProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProducto.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvProducto.Location = new System.Drawing.Point(5, 25);
             this.dgvProducto.Name = "dgvProducto";
+            this.dgvProducto.ReadOnly = true;
             this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducto.Size = new System.Drawing.Size(798, 241);
             this.dgvProducto.TabIndex = 0;
@@ -123,30 +125,35 @@
             this.colNombre.DataPropertyName = "Nombre";
             this.colNombre.HeaderText = "Nombre";
             this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
             // 
             // colCantidad2
             // 
             this.colCantidad2.DataPropertyName = "Cantidad";
             this.colCantidad2.HeaderText = "Cantidad";
             this.colCantidad2.Name = "colCantidad2";
+            this.colCantidad2.ReadOnly = true;
             // 
             // colPrecio
             // 
             this.colPrecio.DataPropertyName = "Precio";
             this.colPrecio.HeaderText = "Precio";
             this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
             // 
             // colSubtotal
             // 
             this.colSubtotal.DataPropertyName = "Subtotal";
             this.colSubtotal.HeaderText = "Subtotal";
             this.colSubtotal.Name = "colSubtotal";
+            this.colSubtotal.ReadOnly = true;
             // 
             // colDescripcion
             // 
             this.colDescripcion.DataPropertyName = "IdProducto";
             this.colDescripcion.HeaderText = "-";
             this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
             this.colDescripcion.Visible = false;
             // 
             // colIdProducto
@@ -154,6 +161,7 @@
             this.colIdProducto.DataPropertyName = "Descripcion";
             this.colIdProducto.HeaderText = "-";
             this.colIdProducto.Name = "colIdProducto";
+            this.colIdProducto.ReadOnly = true;
             this.colIdProducto.Visible = false;
             // 
             // groupBox2
@@ -184,10 +192,12 @@
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.Size = new System.Drawing.Size(798, 204);
             this.dgvDetalle.TabIndex = 1;
+            this.dgvDetalle.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalle_CellEndEdit);
             // 
             // colNumero
             // 
             this.colNumero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colNumero.DataPropertyName = "Numero";
             this.colNumero.HeaderText = "N°";
             this.colNumero.Name = "colNumero";
             this.colNumero.Width = 52;
@@ -195,24 +205,28 @@
             // colFecha
             // 
             this.colFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colFecha.DataPropertyName = "FechaLote";
             this.colFecha.HeaderText = "Fecha";
             this.colFecha.Name = "colFecha";
             // 
             // colFechaCaducidad
             // 
             this.colFechaCaducidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colFechaCaducidad.DataPropertyName = "FechaCaducidad";
             this.colFechaCaducidad.HeaderText = "Caducidad";
             this.colFechaCaducidad.Name = "colFechaCaducidad";
             // 
             // colCantidad
             // 
             this.colCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCantidad.DataPropertyName = "Cantidad";
             this.colCantidad.HeaderText = "Cantidad";
             this.colCantidad.Name = "colCantidad";
             // 
             // colPrecio2
             // 
             this.colPrecio2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colPrecio2.DataPropertyName = "Precio";
             this.colPrecio2.HeaderText = "Precio";
             this.colPrecio2.Name = "colPrecio2";
             // 
@@ -247,11 +261,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvDetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNumero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaCaducidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio2;
         private System.Windows.Forms.DataGridView dgvProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad2;
@@ -259,5 +268,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubtotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaCaducidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio2;
     }
 }
