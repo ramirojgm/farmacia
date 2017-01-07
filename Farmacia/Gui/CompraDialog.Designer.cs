@@ -30,30 +30,31 @@
         {
             this.seleccionarButton = new System.Windows.Forms.Button();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbProveedor = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numNumero = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.txtIva = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.chkIva = new System.Windows.Forms.CheckBox();
+            this.colProducto = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colCantidad2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNumero)).BeginInit();
             this.SuspendLayout();
             // 
             // seleccionarButton
             // 
             this.seleccionarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.seleccionarButton.Enabled = false;
             this.seleccionarButton.Location = new System.Drawing.Point(523, 313);
             this.seleccionarButton.Name = "seleccionarButton";
             this.seleccionarButton.Size = new System.Drawing.Size(184, 31);
@@ -70,43 +71,23 @@
             this.dgvDetalle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNombre,
+            this.colProducto,
             this.colCantidad2,
             this.colPrecio,
             this.colSubtotal});
+            this.dgvDetalle.Enabled = false;
             this.dgvDetalle.Location = new System.Drawing.Point(12, 76);
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.Size = new System.Drawing.Size(696, 231);
             this.dgvDetalle.TabIndex = 2;
             // 
-            // colNombre
+            // dtpFecha
             // 
-            this.colNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNombre.HeaderText = "Producto";
-            this.colNombre.Name = "colNombre";
-            // 
-            // colCantidad2
-            // 
-            this.colCantidad2.HeaderText = "Cantidad";
-            this.colCantidad2.Name = "colCantidad2";
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            // 
-            // colSubtotal
-            // 
-            this.colSubtotal.HeaderText = "Subtotal";
-            this.colSubtotal.Name = "colSubtotal";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(355, 7);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(145, 27);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(355, 7);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(145, 27);
+            this.dtpFecha.TabIndex = 3;
             // 
             // label1
             // 
@@ -126,13 +107,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Proveedor:";
             // 
-            // comboBox1
+            // cmbProveedor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(394, 27);
-            this.comboBox1.TabIndex = 6;
+            this.cmbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Location = new System.Drawing.Point(106, 43);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Size = new System.Drawing.Size(394, 27);
+            this.cmbProveedor.TabIndex = 6;
+            this.cmbProveedor.SelectedValueChanged += new System.EventHandler(this.cmbProveedor_SelectedValueChanged);
             // 
             // label3
             // 
@@ -143,12 +126,12 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Numero:";
             // 
-            // numericUpDown1
+            // numNumero
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(106, 7);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 27);
-            this.numericUpDown1.TabIndex = 8;
+            this.numNumero.Location = new System.Drawing.Point(106, 7);
+            this.numNumero.Name = "numNumero";
+            this.numNumero.Size = new System.Drawing.Size(120, 27);
+            this.numNumero.TabIndex = 8;
             // 
             // label4
             // 
@@ -159,19 +142,23 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Subtotal:";
             // 
-            // textBox1
+            // txtSubtotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 312);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 27);
-            this.textBox1.TabIndex = 10;
+            this.txtSubtotal.Enabled = false;
+            this.txtSubtotal.Location = new System.Drawing.Point(91, 312);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.ReadOnly = true;
+            this.txtSubtotal.Size = new System.Drawing.Size(135, 27);
+            this.txtSubtotal.TabIndex = 10;
             // 
-            // textBox2
+            // txtIva
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 345);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 27);
-            this.textBox2.TabIndex = 12;
+            this.txtIva.Enabled = false;
+            this.txtIva.Location = new System.Drawing.Point(91, 345);
+            this.txtIva.Name = "txtIva";
+            this.txtIva.ReadOnly = true;
+            this.txtIva.Size = new System.Drawing.Size(135, 27);
+            this.txtIva.TabIndex = 12;
             // 
             // label5
             // 
@@ -182,12 +169,14 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "IVA:";
             // 
-            // textBox3
+            // txtTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(91, 378);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 27);
-            this.textBox3.TabIndex = 14;
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(91, 378);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(135, 27);
+            this.txtTotal.TabIndex = 14;
             // 
             // label6
             // 
@@ -198,53 +187,86 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Total:";
             // 
-            // checkBox1
+            // chkIva
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(65, 351);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkIva.AutoSize = true;
+            this.chkIva.Enabled = false;
+            this.chkIva.Location = new System.Drawing.Point(65, 351);
+            this.chkIva.Name = "chkIva";
+            this.chkIva.Size = new System.Drawing.Size(15, 14);
+            this.chkIva.TabIndex = 15;
+            this.chkIva.UseVisualStyleBackColor = true;
+            this.chkIva.CheckedChanged += new System.EventHandler(this.chkIva_CheckedChanged);
+            // 
+            // colProducto
+            // 
+            this.colProducto.AutoComplete = false;
+            this.colProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colProducto.DataPropertyName = "IdProducto";
+            this.colProducto.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colProducto.HeaderText = "Producto";
+            this.colProducto.Name = "colProducto";
+            this.colProducto.ReadOnly = true;
+            // 
+            // colCantidad2
+            // 
+            this.colCantidad2.DataPropertyName = "Cantidad";
+            this.colCantidad2.HeaderText = "Cantidad";
+            this.colCantidad2.Name = "colCantidad2";
+            this.colCantidad2.ReadOnly = true;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.DataPropertyName = "Precio";
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
+            // 
+            // colSubtotal
+            // 
+            this.colSubtotal.DataPropertyName = "Total";
+            this.colSubtotal.HeaderText = "Subtotal";
+            this.colSubtotal.Name = "colSubtotal";
+            this.colSubtotal.ReadOnly = true;
             // 
             // CompraDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.ClientSize = new System.Drawing.Size(719, 508);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.chkIva);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtIva);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSubtotal);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numNumero);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbProveedor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.dgvDetalle);
             this.Controls.Add(this.seleccionarButton);
             this.Name = "CompraDialog";
             this.Text = "Compra";
             this.Controls.SetChildIndex(this.seleccionarButton, 0);
             this.Controls.SetChildIndex(this.dgvDetalle, 0);
-            this.Controls.SetChildIndex(this.dateTimePicker1, 0);
+            this.Controls.SetChildIndex(this.dtpFecha, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
+            this.Controls.SetChildIndex(this.cmbProveedor, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.numericUpDown1, 0);
+            this.Controls.SetChildIndex(this.numNumero, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.txtSubtotal, 0);
             this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.txtIva, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
-            this.Controls.SetChildIndex(this.checkBox1, 0);
+            this.Controls.SetChildIndex(this.txtTotal, 0);
+            this.Controls.SetChildIndex(this.chkIva, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNumero)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,22 +276,22 @@
 
         private System.Windows.Forms.Button seleccionarButton;
         private System.Windows.Forms.DataGridView dgvDetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbProveedor;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numNumero;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSubtotal;
+        private System.Windows.Forms.TextBox txtIva;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox chkIva;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubtotal;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

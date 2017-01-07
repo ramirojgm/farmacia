@@ -72,7 +72,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Ignore;
             this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancelar.Location = new System.Drawing.Point(415, 7);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
@@ -81,13 +81,13 @@
             this.btnCancelar.TabIndex = 0;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // BaseDialog
             // 
             this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(535, 215);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

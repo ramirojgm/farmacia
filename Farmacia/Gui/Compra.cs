@@ -20,7 +20,10 @@ namespace Farmacia.Gui
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CompraDialog dialog = new CompraDialog();
-            dialog.ShowDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

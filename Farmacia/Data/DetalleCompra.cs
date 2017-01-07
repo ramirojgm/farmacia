@@ -17,5 +17,6 @@ namespace Farmacia.Data
         public bool AplicaIVA { get; set; }
         public decimal Descuento { get; set; }
         public decimal Total { get; set; }
+        internal ProductoLote Lote { get; set; }
     }
 }

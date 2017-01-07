@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Farmacia.Gui
 {
@@ -55,6 +56,14 @@ namespace Farmacia.Gui
         {
             productRowUpdate();
             dgvDetalle.Update();
+        }
+
+        public List<Data.ProductoLote> Lote
+        {
+            get {
+                IEnumerable<Data.ProductoLote> source = ((IEnumerable<Data.ProductoLote>)dgvProducto.DataSource);
+                return (from Data.ProductoLote pl in source where pl.Detalle.Count > 0 select pl).ToList();
+            }
         }
     }
 }
