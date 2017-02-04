@@ -59,6 +59,7 @@
     <Compile Include="Data\Lote.cs" />
     <Compile Include="Data\LoteCompra.cs" />
     <Compile Include="Data\LoteVenta.cs" />
+    <Compile Include="Data\MesAyo.cs" />
     <Compile Include="Data\Producto.cs" />
     <Compile Include="Data\ProductoLote.cs" />
     <Compile Include="Data\Proveedor.cs" />

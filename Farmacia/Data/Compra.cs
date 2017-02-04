@@ -10,6 +10,7 @@ namespace Farmacia.Data
 {
     public class Compra
     {
+        public int NumeroCompra { get; set; }
         public int IdCompra { get; set; }
         public DateTime Fecha { get; set; }
         public int IdProveedor { get; set; }
@@ -18,6 +19,7 @@ namespace Farmacia.Data
         public decimal Descuento { get; set; }
         public decimal IVA { get; set; }
         public decimal Total { get; set; }
+        public bool Anulado { get; set; }
         public Proveedor Proveedor { get; set; }
         public BindingList<DetalleCompra> Detalle {get;set; }
         public static Compra Get(int IdCompra) {
@@ -37,6 +39,16 @@ namespace Farmacia.Data
             {
                 dc.IdCompra = IdCompra;
                 dc.IdDetalleCompra = Default.Db.dbo.USPDETALLECOMPRAINSERTAR<int>(Record.FromInstance(dc));
+                foreach(Lote lt in dc.Lote.Detalle)
+                {
+                    lt.Existencia = lt.Cantidad;
+                    lt.Insert();
+                    Data.LoteCompra lote_compra = new LoteCompra();
+                    lote_compra.IdLote = lt.IdLote;
+                    lote_compra.IdDetalleCompra = dc.IdDetalleCompra;
+                    lote_compra.Insert();
+                }
+                
             }
         }
 

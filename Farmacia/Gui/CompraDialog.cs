@@ -24,6 +24,21 @@ namespace Farmacia.Gui
             colProducto.ValueMember = "IdProducto";
         }
 
+        public Data.Compra Get()
+        {
+            CalcularIva();
+            Data.Compra compra = new Data.Compra();
+            compra.NumeroCompra = Convert.ToInt32(numNumero.Value);
+            compra.IdProveedor = Convert.ToInt32(cmbProveedor.SelectedValue);
+            compra.Fecha = dtpFecha.Value;
+            compra.Descuento = 0;
+            compra.IVA = Convert.ToDecimal(txtIva.Text);
+            compra.Subtotal = Convert.ToDecimal(txtSubtotal.Text);
+            compra.Total = Convert.ToDecimal(txtTotal.Text);
+            compra.Detalle = new BindingList<Data.DetalleCompra>((List<Data.DetalleCompra>)dgvDetalle.DataSource); 
+            return compra;
+        }
+
         private void CalcularIva()
         {
             List<Data.DetalleCompra> source = (List<Data.DetalleCompra>)dgvDetalle.DataSource;

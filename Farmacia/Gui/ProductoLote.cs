@@ -43,6 +43,7 @@ namespace Farmacia.Gui
                 decimal cantidad = 0,subtotal = 0;
                 foreach(Data.Lote lote in producto.Detalle)
                 {
+                    lote.IdProducto = producto.IdProducto;
                     cantidad += lote.Cantidad;
                     subtotal += lote.Precio * lote.Cantidad;
                 }

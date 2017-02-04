@@ -28,7 +28,7 @@ namespace Farmacia.Data
         }
 
         public void Insert() {
-            IdLote = Data.Default.Db.USPLOTEINSERTAR<int>(Record.FromInstance(this));
+            IdLote = Data.Default.Db.dbo.USPLOTEINSERTAR<int>(Record.FromInstance(this));
         }
 
         public void Delete() {

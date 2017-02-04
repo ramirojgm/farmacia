@@ -29,96 +29,110 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCompra = new System.Windows.Forms.DataGridView();
+            this.colNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProveedor = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAnulado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.compraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.anularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mes_ayoStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.mes_ayo = new System.Windows.Forms.ToolStripComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvCliente
+            // dgvCompra
             // 
-            this.dgvCliente.AllowUserToAddRows = false;
-            this.dgvCliente.AllowUserToDeleteRows = false;
+            this.dgvCompra.AllowUserToAddRows = false;
+            this.dgvCompra.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
-            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCliente.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNombre,
-            this.colDireccion,
-            this.colNCedula,
-            this.colNTelefono,
-            this.IdCliente});
-            this.dgvCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCliente.Location = new System.Drawing.Point(0, 0);
-            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.RowHeadersWidth = 27;
-            this.dgvCliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(740, 433);
-            this.dgvCliente.TabIndex = 2;
+            this.dgvCompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCompra.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNumero,
+            this.colFecha,
+            this.colProveedor,
+            this.colSubtotal,
+            this.colIva,
+            this.colTotal,
+            this.colAnulado});
+            this.dgvCompra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCompra.Location = new System.Drawing.Point(0, 0);
+            this.dgvCompra.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCompra.Name = "dgvCompra";
+            this.dgvCompra.ReadOnly = true;
+            this.dgvCompra.RowHeadersWidth = 27;
+            this.dgvCompra.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCompra.Size = new System.Drawing.Size(740, 433);
+            this.dgvCompra.TabIndex = 2;
             // 
-            // colNombre
+            // colNumero
             // 
-            this.colNombre.DataPropertyName = "Nombre";
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
+            this.colNumero.DataPropertyName = "NumeroCompra";
+            this.colNumero.HeaderText = "Numero";
+            this.colNumero.Name = "colNumero";
+            this.colNumero.ReadOnly = true;
             // 
-            // colDireccion
+            // colFecha
             // 
-            this.colDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDireccion.DataPropertyName = "Direccion";
-            this.colDireccion.HeaderText = "Dirección";
-            this.colDireccion.Name = "colDireccion";
-            this.colDireccion.ReadOnly = true;
+            this.colFecha.DataPropertyName = "Fecha";
+            this.colFecha.HeaderText = "Fecha";
+            this.colFecha.Name = "colFecha";
+            this.colFecha.ReadOnly = true;
             // 
-            // colNCedula
+            // colProveedor
             // 
-            this.colNCedula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colNCedula.DataPropertyName = "NCedula";
-            this.colNCedula.HeaderText = "N° Cedula";
-            this.colNCedula.Name = "colNCedula";
-            this.colNCedula.ReadOnly = true;
-            this.colNCedula.Width = 80;
+            this.colProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colProveedor.DataPropertyName = "IdProveedor";
+            this.colProveedor.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colProveedor.HeaderText = "Proveedor";
+            this.colProveedor.Name = "colProveedor";
+            this.colProveedor.ReadOnly = true;
             // 
-            // colNTelefono
+            // colSubtotal
             // 
-            this.colNTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colNTelefono.DataPropertyName = "NTelefono";
-            this.colNTelefono.HeaderText = "N° Telefono";
-            this.colNTelefono.Name = "colNTelefono";
-            this.colNTelefono.ReadOnly = true;
-            this.colNTelefono.Width = 89;
+            this.colSubtotal.DataPropertyName = "Subtotal";
+            this.colSubtotal.HeaderText = "Subtotal";
+            this.colSubtotal.Name = "colSubtotal";
+            this.colSubtotal.ReadOnly = true;
             // 
-            // IdCliente
+            // colIva
             // 
-            this.IdCliente.DataPropertyName = "IdCliente";
-            this.IdCliente.HeaderText = "IdCliente";
-            this.IdCliente.Name = "IdCliente";
-            this.IdCliente.ReadOnly = true;
-            this.IdCliente.Visible = false;
+            this.colIva.DataPropertyName = "IVA";
+            this.colIva.HeaderText = "IVA";
+            this.colIva.Name = "colIva";
+            this.colIva.ReadOnly = true;
+            // 
+            // colTotal
+            // 
+            this.colTotal.DataPropertyName = "Total";
+            this.colTotal.HeaderText = "Total";
+            this.colTotal.Name = "colTotal";
+            this.colTotal.ReadOnly = true;
+            // 
+            // colAnulado
+            // 
+            this.colAnulado.DataPropertyName = "Anulado";
+            this.colAnulado.HeaderText = "Anulado";
+            this.colAnulado.Name = "colAnulado";
+            this.colAnulado.ReadOnly = true;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.compraToolStripMenuItem,
-            this.mes_ayoStripComboBox1});
-            this.menuStrip1.Location = new System.Drawing.Point(170, 162);
+            this.mes_ayo});
+            this.menuStrip1.Location = new System.Drawing.Point(229, 87);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(285, 27);
             this.menuStrip1.TabIndex = 3;
@@ -137,37 +151,40 @@
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(106, 6);
             // 
             // anularToolStripMenuItem
             // 
             this.anularToolStripMenuItem.Name = "anularToolStripMenuItem";
-            this.anularToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.anularToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.anularToolStripMenuItem.Text = "Anular";
+            this.anularToolStripMenuItem.Click += new System.EventHandler(this.anularToolStripMenuItem_Click);
             // 
-            // mes_ayoStripComboBox1
+            // mes_ayo
             // 
-            this.mes_ayoStripComboBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.mes_ayoStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mes_ayoStripComboBox1.Name = "mes_ayoStripComboBox1";
-            this.mes_ayoStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.mes_ayo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.mes_ayo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mes_ayo.Name = "mes_ayo";
+            this.mes_ayo.Size = new System.Drawing.Size(121, 23);
+            this.mes_ayo.SelectedIndexChanged += new System.EventHandler(this.mes_ayo_SelectedIndexChanged);
+            this.mes_ayo.TextUpdate += new System.EventHandler(this.mes_ayo_TextUpdate);
             // 
             // Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(740, 433);
-            this.Controls.Add(this.dgvCliente);
+            this.Controls.Add(this.dgvCompra);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Compra";
             this.Text = "Compra";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -177,17 +194,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDireccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNCedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
+        private System.Windows.Forms.DataGridView dgvCompra;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem compraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem anularToolStripMenuItem;
-        private System.Windows.Forms.ToolStripComboBox mes_ayoStripComboBox1;
+        private System.Windows.Forms.ToolStripComboBox mes_ayo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSubtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colAnulado;
     }
 }
