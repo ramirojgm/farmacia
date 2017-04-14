@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Farmacia.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace Farmacia.Gui
         public Activity()
         {
             InitializeComponent();
+            foreach (var att in this.GetType().GetCustomAttributes(typeof(ActivityAttribute), false))
+            {
+                var aa = att as ActivityAttribute;
+                this.Icon = Icon.FromHandle(new Bitmap(Image.FromFile("Icon/" + aa.IconName),new Size(16,16)).GetHicon());
+            }
         }
     }
 }

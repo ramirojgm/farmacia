@@ -14,5 +14,6 @@ namespace Farmacia.Data
         public decimal Precio { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Importe { get; set; }
+        internal ProductoLote Lote { get; set; }
     }
 }

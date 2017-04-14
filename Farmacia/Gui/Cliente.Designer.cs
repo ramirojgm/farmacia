@@ -69,7 +69,7 @@
             this.dgvCliente.RowHeadersWidth = 27;
             this.dgvCliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(844, 315);
+            this.dgvCliente.Size = new System.Drawing.Size(750, 298);
             this.dgvCliente.TabIndex = 0;
             // 
             // colNombre
@@ -94,6 +94,7 @@
             this.colNCedula.HeaderText = "N° Cedula";
             this.colNCedula.Name = "colNCedula";
             this.colNCedula.ReadOnly = true;
+            this.colNCedula.Width = 105;
             // 
             // colNTelefono
             // 
@@ -102,7 +103,7 @@
             this.colNTelefono.HeaderText = "N° Telefono";
             this.colNTelefono.Name = "colNTelefono";
             this.colNTelefono.ReadOnly = true;
-            this.colNTelefono.Width = 113;
+            this.colNTelefono.Width = 121;
             // 
             // IdCliente
             // 
@@ -118,9 +119,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
             this.txtBuscar});
-            this.menuStrip1.Location = new System.Drawing.Point(232, 170);
+            this.menuStrip1.Location = new System.Drawing.Point(206, 161);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(216, 27);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(199, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -166,17 +168,15 @@
             this.txtBuscar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(150, 23);
+            this.txtBuscar.Size = new System.Drawing.Size(134, 23);
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.ClientSize = new System.Drawing.Size(844, 315);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.ClientSize = new System.Drawing.Size(750, 298);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cliente";
             this.Text = "Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();

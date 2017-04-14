@@ -19,11 +19,6 @@ namespace Farmacia.Gui
         public Compra()
         {
             InitializeComponent();
-            dgvCompra.AutoGenerateColumns = false;
-            colProveedor.DataSource = Data.Proveedor.Get();
-            colProveedor.DisplayMember = "Nombre";
-            colProveedor.ValueMember = "IdProveedor";
-            LoadSource();
         }
 
         private void LoadSource()
@@ -37,7 +32,7 @@ namespace Farmacia.Gui
                 selected_value = (Data.MesAyo)mes_ayo.SelectedItem;
             }
             mes_ayo.Items.Clear();
-            dynamic min_max = Data.Default.Db.Query<Record>("SELECT MAX(Fecha) AS MN,MIN(Fecha) AS MX FROM Compra");
+            dynamic min_max = Data.Default.Db.Query<Record>("SELECT MAX(Fecha) AS MX,MIN(Fecha) AS MN FROM Compra");
             if (min_max.MN != null)
             {
                 DateTime min = Convert.ToDateTime(min_max.MN);
@@ -127,6 +122,15 @@ namespace Farmacia.Gui
                     LoadSource();
                 }
             }
+        }
+
+        private void Compra_Load(object sender, EventArgs e)
+        {
+            dgvCompra.AutoGenerateColumns = false;
+            colProveedor.DataSource = Data.Proveedor.Get();
+            colProveedor.DisplayMember = "Nombre";
+            colProveedor.ValueMember = "IdProveedor";
+            LoadSource();
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace Farmacia.Gui
 {
-    [Activity("Cliente", "users-1.png")]
+    [Activity("Cliente", "user-4.png")]
     public partial class Cliente : Farmacia.Gui.Activity
     {
         private BindingList<Data.Cliente> source = null;

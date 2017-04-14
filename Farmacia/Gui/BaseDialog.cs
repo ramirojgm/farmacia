@@ -31,5 +31,10 @@ namespace Farmacia.Gui
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void BaseDialog_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Epn.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,11 @@ namespace Farmacia.Data
     {
         public int IdLoteVenta { get; set; }
         public int IdLote { get; set; }
-        public int IdVenta { get; set; }
         public decimal Cantidad { get; set; }
-        public decimal Precio { get; set; }
+        public int IdDetalleVenta { get; set; }
+        public void Insert()
+        {
+            IdLoteVenta = Data.Default.Db.dbo.USPLOTEVENTAINSERTAR<int>(Record.FromInstance(this));
+        }
     }
 }

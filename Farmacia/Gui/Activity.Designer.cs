@@ -32,9 +32,11 @@
             // 
             // Activity
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 433);
+            this.ClientSize = new System.Drawing.Size(873, 600);
+            this.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Activity";
             this.Text = "Activity";
             this.ResumeLayout(false);

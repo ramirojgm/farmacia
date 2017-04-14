@@ -66,13 +66,13 @@
             this.colAnulado});
             this.dgvCompra.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCompra.Location = new System.Drawing.Point(0, 0);
-            this.dgvCompra.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCompra.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dgvCompra.Name = "dgvCompra";
             this.dgvCompra.ReadOnly = true;
             this.dgvCompra.RowHeadersWidth = 27;
             this.dgvCompra.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCompra.Size = new System.Drawing.Size(740, 433);
+            this.dgvCompra.Size = new System.Drawing.Size(987, 600);
             this.dgvCompra.TabIndex = 2;
             // 
             // colNumero
@@ -129,12 +129,14 @@
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.compraToolStripMenuItem,
             this.mes_ayo});
-            this.menuStrip1.Location = new System.Drawing.Point(229, 87);
+            this.menuStrip1.Location = new System.Drawing.Point(305, 120);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(285, 27);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(332, 32);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -145,25 +147,25 @@
             this.toolStripSeparator1,
             this.anularToolStripMenuItem});
             this.compraToolStripMenuItem.Name = "compraToolStripMenuItem";
-            this.compraToolStripMenuItem.Size = new System.Drawing.Size(62, 23);
+            this.compraToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.compraToolStripMenuItem.Text = "Compra";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(106, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
             // 
             // anularToolStripMenuItem
             // 
             this.anularToolStripMenuItem.Name = "anularToolStripMenuItem";
-            this.anularToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.anularToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.anularToolStripMenuItem.Text = "Anular";
             this.anularToolStripMenuItem.Click += new System.EventHandler(this.anularToolStripMenuItem_Click);
             // 
@@ -171,19 +173,22 @@
             // 
             this.mes_ayo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.mes_ayo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mes_ayo.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mes_ayo.Name = "mes_ayo";
-            this.mes_ayo.Size = new System.Drawing.Size(121, 23);
+            this.mes_ayo.Size = new System.Drawing.Size(160, 26);
             this.mes_ayo.SelectedIndexChanged += new System.EventHandler(this.mes_ayo_SelectedIndexChanged);
             this.mes_ayo.TextUpdate += new System.EventHandler(this.mes_ayo_TextUpdate);
             // 
             // Compra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(740, 433);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.ClientSize = new System.Drawing.Size(987, 600);
             this.Controls.Add(this.dgvCompra);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Compra";
             this.Text = "Compra";
+            this.Load += new System.EventHandler(this.Compra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
