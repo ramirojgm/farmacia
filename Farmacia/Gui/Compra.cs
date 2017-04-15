@@ -108,11 +108,6 @@ namespace Farmacia.Gui
             }
         }
 
-        private void mes_ayo_TextUpdate(object sender, EventArgs e)
-        {
-
-        }
-
         private void mes_ayo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!selecting)

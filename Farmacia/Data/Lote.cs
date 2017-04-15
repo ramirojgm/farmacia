@@ -18,14 +18,14 @@ namespace Farmacia.Data
         public decimal Cantidad { get; set; }
         public decimal Precio { get; set; }
         public decimal Existencia { get; set; }
+        public decimal Afectacion { get; set; }
+        public decimal Saldo { get; set; }
 
-        public static Lote Get(int IdLote) {
-            return Data.Default.Db.USPLOTESELECCIONAR<Record, Lote>(IdLote: IdLote);
+        public static BindingList<Lote> Get(int IdProducto)
+        {
+            return new BindingList<Lote>(Data.Default.Db.USPLOTESELECCIONAR<RecordSet, Lote>(IdProducto: IdProducto));
         }
 
-        public static BindingList<Lote> Get() {
-            return new BindingList<Lote>(Data.Default.Db.USPLOTESELECCIONAR<RecordSet, Lote>());
-        }
 
         public void Insert() {
             IdLote = Data.Default.Db.dbo.USPLOTEINSERTAR<int>(Record.FromInstance(this));

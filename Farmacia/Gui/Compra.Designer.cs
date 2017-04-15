@@ -177,7 +177,6 @@
             this.mes_ayo.Name = "mes_ayo";
             this.mes_ayo.Size = new System.Drawing.Size(160, 26);
             this.mes_ayo.SelectedIndexChanged += new System.EventHandler(this.mes_ayo_SelectedIndexChanged);
-            this.mes_ayo.TextUpdate += new System.EventHandler(this.mes_ayo_TextUpdate);
             // 
             // Compra
             // 

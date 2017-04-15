@@ -21,6 +21,7 @@ namespace Farmacia.Data
         public static BindingList<ProductoLote> Get()
         {
             return new BindingList<ProductoLote>(Default.Db.dbo.USPPRODUCTOSELECCIONAR<RecordSet, ProductoLote>());
+
         }
     }
 }

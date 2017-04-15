@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Epn.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,11 @@ namespace Farmacia.Data
         public string Direccion { get; set; }
         public string NCedula { get; set; }
         public string NTelefono { get; set; }
+
+        public static List<Cliente> Get()
+        {
+            return Data.Default.Db.USPCLIENTESELECCIONAR<RecordSet, Cliente>();
+        }
+
     }
 }

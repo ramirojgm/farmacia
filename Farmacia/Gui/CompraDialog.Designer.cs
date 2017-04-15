@@ -30,6 +30,10 @@
         {
             this.seleccionarButton = new System.Windows.Forms.Button();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
+            this.colProducto = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colCantidad2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.chkIva = new System.Windows.Forms.CheckBox();
-            this.colProducto = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colCantidad2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumero)).BeginInit();
             this.SuspendLayout();
@@ -55,9 +55,9 @@
             // 
             this.seleccionarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.seleccionarButton.Enabled = false;
-            this.seleccionarButton.Location = new System.Drawing.Point(523, 313);
+            this.seleccionarButton.Location = new System.Drawing.Point(465, 297);
             this.seleccionarButton.Name = "seleccionarButton";
-            this.seleccionarButton.Size = new System.Drawing.Size(184, 31);
+            this.seleccionarButton.Size = new System.Drawing.Size(164, 29);
             this.seleccionarButton.TabIndex = 1;
             this.seleccionarButton.Text = "Seleccionar producto";
             this.seleccionarButton.UseVisualStyleBackColor = true;
@@ -76,127 +76,10 @@
             this.colPrecio,
             this.colSubtotal});
             this.dgvDetalle.Enabled = false;
-            this.dgvDetalle.Location = new System.Drawing.Point(12, 76);
+            this.dgvDetalle.Location = new System.Drawing.Point(11, 72);
             this.dgvDetalle.Name = "dgvDetalle";
-            this.dgvDetalle.Size = new System.Drawing.Size(696, 231);
+            this.dgvDetalle.Size = new System.Drawing.Size(619, 219);
             this.dgvDetalle.TabIndex = 2;
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(355, 7);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(145, 27);
-            this.dtpFecha.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(296, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 19);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Fecha:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 19);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Proveedor:";
-            // 
-            // cmbProveedor
-            // 
-            this.cmbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProveedor.FormattingEnabled = true;
-            this.cmbProveedor.Location = new System.Drawing.Point(106, 43);
-            this.cmbProveedor.Name = "cmbProveedor";
-            this.cmbProveedor.Size = new System.Drawing.Size(394, 27);
-            this.cmbProveedor.TabIndex = 6;
-            this.cmbProveedor.SelectedValueChanged += new System.EventHandler(this.cmbProveedor_SelectedValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Numero:";
-            // 
-            // numNumero
-            // 
-            this.numNumero.Location = new System.Drawing.Point(106, 7);
-            this.numNumero.Name = "numNumero";
-            this.numNumero.Size = new System.Drawing.Size(120, 27);
-            this.numNumero.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 314);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 19);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Subtotal:";
-            // 
-            // txtSubtotal
-            // 
-            this.txtSubtotal.Enabled = false;
-            this.txtSubtotal.Location = new System.Drawing.Point(91, 312);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.ReadOnly = true;
-            this.txtSubtotal.Size = new System.Drawing.Size(135, 27);
-            this.txtSubtotal.TabIndex = 10;
-            // 
-            // txtIva
-            // 
-            this.txtIva.Enabled = false;
-            this.txtIva.Location = new System.Drawing.Point(91, 345);
-            this.txtIva.Name = "txtIva";
-            this.txtIva.ReadOnly = true;
-            this.txtIva.Size = new System.Drawing.Size(135, 27);
-            this.txtIva.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 347);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 19);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "IVA:";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(91, 378);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(135, 27);
-            this.txtTotal.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 380);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 19);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Total:";
-            // 
-            // chkIva
-            // 
-            this.chkIva.AutoSize = true;
-            this.chkIva.Enabled = false;
-            this.chkIva.Location = new System.Drawing.Point(65, 351);
-            this.chkIva.Name = "chkIva";
-            this.chkIva.Size = new System.Drawing.Size(15, 14);
-            this.chkIva.TabIndex = 15;
-            this.chkIva.UseVisualStyleBackColor = true;
-            this.chkIva.CheckedChanged += new System.EventHandler(this.chkIva_CheckedChanged);
             // 
             // colProducto
             // 
@@ -229,10 +112,127 @@
             this.colSubtotal.Name = "colSubtotal";
             this.colSubtotal.ReadOnly = true;
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(316, 7);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(129, 25);
+            this.dtpFecha.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(263, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 18);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Fecha:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 18);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Proveedor:";
+            // 
+            // cmbProveedor
+            // 
+            this.cmbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Location = new System.Drawing.Point(94, 41);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Size = new System.Drawing.Size(351, 26);
+            this.cmbProveedor.TabIndex = 6;
+            this.cmbProveedor.SelectedValueChanged += new System.EventHandler(this.cmbProveedor_SelectedValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 18);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Numero:";
+            // 
+            // numNumero
+            // 
+            this.numNumero.Location = new System.Drawing.Point(94, 7);
+            this.numNumero.Name = "numNumero";
+            this.numNumero.Size = new System.Drawing.Size(107, 25);
+            this.numNumero.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 297);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 18);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Subtotal:";
+            // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Enabled = false;
+            this.txtSubtotal.Location = new System.Drawing.Point(81, 296);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.ReadOnly = true;
+            this.txtSubtotal.Size = new System.Drawing.Size(120, 25);
+            this.txtSubtotal.TabIndex = 10;
+            // 
+            // txtIva
+            // 
+            this.txtIva.Enabled = false;
+            this.txtIva.Location = new System.Drawing.Point(81, 327);
+            this.txtIva.Name = "txtIva";
+            this.txtIva.ReadOnly = true;
+            this.txtIva.Size = new System.Drawing.Size(120, 25);
+            this.txtIva.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 329);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 18);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "IVA:";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(81, 358);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(120, 25);
+            this.txtTotal.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 360);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 18);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Total:";
+            // 
+            // chkIva
+            // 
+            this.chkIva.AutoSize = true;
+            this.chkIva.Enabled = false;
+            this.chkIva.Location = new System.Drawing.Point(58, 333);
+            this.chkIva.Name = "chkIva";
+            this.chkIva.Size = new System.Drawing.Size(15, 14);
+            this.chkIva.TabIndex = 15;
+            this.chkIva.UseVisualStyleBackColor = true;
+            this.chkIva.CheckedChanged += new System.EventHandler(this.chkIva_CheckedChanged);
+            // 
             // CompraDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.ClientSize = new System.Drawing.Size(719, 508);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.ClientSize = new System.Drawing.Size(639, 481);
             this.Controls.Add(this.chkIva);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label6);
@@ -250,6 +250,7 @@
             this.Controls.Add(this.seleccionarButton);
             this.Name = "CompraDialog";
             this.Text = "Compra";
+            this.Load += new System.EventHandler(this.CompraDialog_Load);
             this.Controls.SetChildIndex(this.seleccionarButton, 0);
             this.Controls.SetChildIndex(this.dgvDetalle, 0);
             this.Controls.SetChildIndex(this.dtpFecha, 0);

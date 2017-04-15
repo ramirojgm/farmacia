@@ -45,6 +45,9 @@
             this.colFechaCaducidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAfectacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSaldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -57,9 +60,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 6);
+            this.textBox1.Location = new System.Drawing.Point(11, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 27);
+            this.textBox1.Size = new System.Drawing.Size(197, 25);
             this.textBox1.TabIndex = 1;
             // 
             // splitContainer1
@@ -67,7 +70,7 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(12, 39);
+            this.splitContainer1.Location = new System.Drawing.Point(11, 37);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -78,8 +81,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(808, 509);
-            this.splitContainer1.SplitterDistance = 271;
+            this.splitContainer1.Size = new System.Drawing.Size(794, 482);
+            this.splitContainer1.SplitterDistance = 256;
             this.splitContainer1.TabIndex = 2;
             // 
             // groupBox1
@@ -88,8 +91,8 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(808, 271);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(794, 256);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Producto";
@@ -110,13 +113,14 @@
             this.colIdProducto});
             this.dgvProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProducto.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dgvProducto.Location = new System.Drawing.Point(5, 25);
+            this.dgvProducto.Location = new System.Drawing.Point(4, 23);
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.ReadOnly = true;
             this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducto.Size = new System.Drawing.Size(798, 241);
+            this.dgvProducto.Size = new System.Drawing.Size(786, 228);
             this.dgvProducto.TabIndex = 0;
             this.dgvProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvProducto.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellEndEdit);
             this.dgvProducto.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_RowEnter);
             // 
             // colNombre
@@ -170,8 +174,8 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox2.Size = new System.Drawing.Size(808, 234);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(794, 222);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lotes";
@@ -186,11 +190,14 @@
             this.colFecha,
             this.colFechaCaducidad,
             this.colCantidad,
-            this.colPrecio2});
+            this.colPrecio2,
+            this.colExistencia,
+            this.colAfectacion,
+            this.colSaldo});
             this.dgvDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDetalle.Location = new System.Drawing.Point(5, 25);
+            this.dgvDetalle.Location = new System.Drawing.Point(4, 23);
             this.dgvDetalle.Name = "dgvDetalle";
-            this.dgvDetalle.Size = new System.Drawing.Size(798, 204);
+            this.dgvDetalle.Size = new System.Drawing.Size(786, 194);
             this.dgvDetalle.TabIndex = 1;
             this.dgvDetalle.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalle_CellEndEdit);
             // 
@@ -200,7 +207,7 @@
             this.colNumero.DataPropertyName = "Numero";
             this.colNumero.HeaderText = "N°";
             this.colNumero.Name = "colNumero";
-            this.colNumero.Width = 52;
+            this.colNumero.Width = 49;
             // 
             // colFecha
             // 
@@ -230,10 +237,31 @@
             this.colPrecio2.HeaderText = "Precio";
             this.colPrecio2.Name = "colPrecio2";
             // 
+            // colExistencia
+            // 
+            this.colExistencia.DataPropertyName = "Existencia";
+            this.colExistencia.HeaderText = "Existencia";
+            this.colExistencia.Name = "colExistencia";
+            this.colExistencia.Visible = false;
+            // 
+            // colAfectacion
+            // 
+            this.colAfectacion.DataPropertyName = "Afectacion";
+            this.colAfectacion.HeaderText = "Afectación";
+            this.colAfectacion.Name = "colAfectacion";
+            this.colAfectacion.Visible = false;
+            // 
+            // colSaldo
+            // 
+            this.colSaldo.DataPropertyName = "Saldo";
+            this.colSaldo.HeaderText = "Saldo";
+            this.colSaldo.Name = "colSaldo";
+            this.colSaldo.Visible = false;
+            // 
             // ProductoLote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.ClientSize = new System.Drawing.Size(828, 608);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.ClientSize = new System.Drawing.Size(812, 576);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.splitContainer1);
             this.Name = "ProductoLote";
@@ -273,5 +301,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaCaducidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colExistencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAfectacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSaldo;
     }
 }

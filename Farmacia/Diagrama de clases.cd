@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Farmacia.Data.Cliente" Collapsed="true">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAACAAgAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Data\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.Compra" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEgEAAAAAEgAFAgAAAAAABAAAAQAABAAgCAAAAAAA=</HashCode>
+      <FileName>Data\Compra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.Default" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Default.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.DetalleCompra" Collapsed="true">
+    <Position X="12.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEQCEAAAAAAAAAAAEAAAAQABAAQAAAAAQCAAAAAAA=</HashCode>
+      <FileName>Data\DetalleCompra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.DetalleVenta" Collapsed="true">
+    <Position X="14.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQCEAAAEAAAAAAAEAAAAQAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DetalleVenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.Lote" Collapsed="true">
+    <Position X="16" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAGEAAAAAIABAAAAEAAAQAAEAAAAAABAAAAABAQA=</HashCode>
+      <FileName>Data\Lote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.LoteCompra" Collapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAQAAAAA=</HashCode>
+      <FileName>Data\LoteCompra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.LoteVenta" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEEAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAAQAA=</HashCode>
+      <FileName>Data\LoteVenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.MesAyo" Collapsed="true">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEFAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\MesAyo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.Producto" Collapsed="true">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAADAAAAAAAABgAAAAgAARAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.ProductoLote" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgCEAAAAEAABAAAAAgAARAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ProductoLote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.Proveedor" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgABAACAAgAAAAAAAAAAAAAAAAkAAAAA=</HashCode>
+      <FileName>Data\Proveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Data.Venta" Collapsed="true">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAAAEgAFAgACAAAAAAAAAQAgAAAgABAABAAA=</HashCode>
+      <FileName>Data\Venta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.Activity" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gui\Activity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.ActivityButton" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAAAAAAEBAAAQAAAAAAAAAAAAAABAAAAEAAAA=</HashCode>
+      <FileName>Gui\ActivityButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.BaseDialog" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAIgABAGAAAACAAhAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Gui\BaseDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.Cliente" Collapsed="true">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAYkAACIEAAIABACSBIACACCAABAAAAAABAAAAAI=</HashCode>
+      <FileName>Gui\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.ClienteDialog" Collapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAACAACBAAAACAAAQCACAAAAAgAAAAAAAABiA=</HashCode>
+      <FileName>Gui\ClienteDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.Compra" Collapsed="true">
+    <Position X="1" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEABCgAAApAGGCSBAgSAAEAAAAoAAAhAAEAAAA=</HashCode>
+      <FileName>Gui\Compra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.CompraDialog" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQBQICAAAFBAAACAAAAWAAQAAAEBBAABABAgAgA=</HashCode>
+      <FileName>Gui\CompraDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.Producto" Collapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYQAIQkgBioAIUIQBACaBICCAABICAAAAAAAAAAAAAM=</HashCode>
+      <FileName>Gui\Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.ProductoDialog" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAICAAABAAABCEAAQCASAAAAAAAAAAAAAABCA=</HashCode>
+      <FileName>Gui\ProductoDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.ProductoLote" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQABgBiAAQMAQAECBAAASACIgAQABECQAAAAAAAA=</HashCode>
+      <FileName>Gui\ProductoLote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.Proveedor" Collapsed="true">
+    <Position X="10" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAGYkAACICgAIABACSBIACACAAABAAAAAAAAAAAAI=</HashCode>
+      <FileName>Gui\Proveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.ProveedorDialog" Collapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAACAAABAAAACAAAQCAGAAAIAgAAAAAAAABiA=</HashCode>
+      <FileName>Gui\ProveedorDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Gui.Venta" Collapsed="true">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCgAAAoAAECAAAASAAAAAAAoACAAAAEAAAA=</HashCode>
+      <FileName>Gui\Venta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.MainWindow" Collapsed="true">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAkAACAAACAAAgCAAAACgAAIAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Gui\MainWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Program" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Properties.Resources" Collapsed="true">
+    <Position X="14.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Properties.Settings" Collapsed="true">
+    <Position X="16" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Farmacia.Utils.ActivityAttribute" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\ActivityAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

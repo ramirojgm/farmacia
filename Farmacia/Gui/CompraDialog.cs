@@ -14,14 +14,6 @@ namespace Farmacia.Gui
         public CompraDialog()
         {
             InitializeComponent();
-            cmbProveedor.DataSource = Data.Proveedor.Get();
-            cmbProveedor.ValueMember = "IdProveedor";
-            cmbProveedor.DisplayMember = "Nombre";
-            dgvDetalle.AutoGenerateColumns = false;
-            dgvDetalle.DataSource = new List<Data.DetalleCompra>();
-            colProducto.DataSource = Data.Producto.Get();
-            colProducto.DisplayMember = "Nombre";
-            colProducto.ValueMember = "IdProducto";
         }
 
         public Data.Compra Get()
@@ -101,6 +93,18 @@ namespace Farmacia.Gui
         private void chkIva_CheckedChanged(object sender, EventArgs e)
         {
             CalcularIva();
+        }
+
+        private void CompraDialog_Load(object sender, EventArgs e)
+        {
+            cmbProveedor.DataSource = Data.Proveedor.Get();
+            cmbProveedor.ValueMember = "IdProveedor";
+            cmbProveedor.DisplayMember = "Nombre";
+            dgvDetalle.AutoGenerateColumns = false;
+            dgvDetalle.DataSource = new List<Data.DetalleCompra>();
+            colProducto.DataSource = Data.Producto.Get();
+            colProducto.DisplayMember = "Nombre";
+            colProducto.ValueMember = "IdProducto";
         }
     }
 }
