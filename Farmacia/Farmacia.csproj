@@ -101,6 +101,12 @@
     <Compile Include="Gui\CompraDialog.Designer.cs">
       <DependentUpon>CompraDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\Kardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Kardex.Designer.cs">
+      <DependentUpon>Kardex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\CompraDialog.resx">
       <DependentUpon>CompraDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Kardex.resx">
+      <DependentUpon>Kardex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

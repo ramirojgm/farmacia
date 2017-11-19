@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Farmacia.Data
 {
-    class Venta
+    public class Venta
     {
         public int Numero { get; set; }
         public int IdVenta { get; set; }
@@ -47,6 +47,7 @@ namespace Farmacia.Data
                     Data.LoteVenta lote_venta = new LoteVenta();
                     lote_venta.IdLote = lt.IdLote;
                     lote_venta.IdDetalleVenta = dv.IdDetalleVenta;
+                    lote_venta.Cantidad = lt.Afectacion;
                     lote_venta.Insert();
                 }
             }

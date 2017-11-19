@@ -26,7 +26,7 @@ namespace Farmacia.Gui
             bool selected = false;
             int selected_index = -1;
             Data.MesAyo selected_value = null;
-            if (mes_ayo.Selected)
+            if (mes_ayo.SelectedItem != null)
             {
                 selected = true;
                 selected_value = (Data.MesAyo)mes_ayo.SelectedItem;
@@ -60,7 +60,7 @@ namespace Farmacia.Gui
                     selecting = false;
                 }
             }
-            if (mes_ayo.Selected)
+            if (mes_ayo.SelectedItem != null)
             {
                 source = Data.Compra.Get();
                 IEnumerable<Data.Compra> enumerable = source;

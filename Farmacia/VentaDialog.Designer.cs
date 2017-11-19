@@ -60,6 +60,7 @@
             this.chkIva.Size = new System.Drawing.Size(15, 14);
             this.chkIva.TabIndex = 30;
             this.chkIva.UseVisualStyleBackColor = true;
+            this.chkIva.CheckedChanged += new System.EventHandler(this.chkIva_CheckedChanged);
             // 
             // txtTotal
             // 
@@ -211,7 +212,7 @@
             // 
             // colSubtotal
             // 
-            this.colSubtotal.DataPropertyName = "Total";
+            this.colSubtotal.DataPropertyName = "Importe";
             this.colSubtotal.HeaderText = "Subtotal";
             this.colSubtotal.Name = "colSubtotal";
             this.colSubtotal.ReadOnly = true;
@@ -288,10 +289,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.DataGridView dgvDetalle;
+        private System.Windows.Forms.Button seleccionarButton;
         private System.Windows.Forms.DataGridViewComboBoxColumn colProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSubtotal;
-        private System.Windows.Forms.Button seleccionarButton;
     }
 }

@@ -1667,3 +1667,5 @@ C:\Users\rgarcia\Source\Repos\farmacia\Farmacia\bin\Debug\Epn.Data.dll
 C:\Users\rgarcia\Source\Repos\farmacia\Farmacia\obj\Debug\Farmacia.exe
 C:\Users\rgarcia\Source\Repos\farmacia\Farmacia\obj\Debug\Farmacia.pdb
 C:\Users\rgarcia\Source\Repos\farmacia\Farmacia\obj\Debug\Farmacia.VentaDialog.resources
+C:\Users\rgarcia\Source\Repos\farmacia\Farmacia\obj\Debug\Farmacia.csprojResolveAssemblyReference.cache
+C:\Users\rgarcia\Source\Repos\farmacia\Farmacia\obj\Debug\Farmacia.Gui.Kardex.resources

@@ -16,6 +16,7 @@ namespace Farmacia.Gui
     {
         private BindingList<Data.Venta> source = null;
         private bool selecting = false;
+
         public Venta()
         {
             InitializeComponent();
@@ -26,22 +27,37 @@ namespace Farmacia.Gui
             VentaDialog dialog = new VentaDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                /*Data.Compra compra = dialog.Get();
-                if (compra.Detalle.Count > 0)
+                Data.Venta venta = dialog.Get();
+                if (venta.Detalle.Count > 0)
                 {
-                    compra.Insert();
+                    venta.Insert();
                     LoadSource();
                 }
                 else
                 {
                     MessageBox.Show("La compra esta vacia no se puede guardar", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
+                }
             }
         }
 
         private void anularToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (dgvVenta.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Esta seguro que desea anular la venta", "Anular", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Data.Venta venta = source[dgvVenta.SelectedRows[0].Index];
+                    if (!venta.Anulado)
+                    {
+                        venta.Annulate();
+                        LoadSource();
+                    }
+                    else
+                    {
+                        MessageBox.Show("La venta ya esta anulada", "Anular", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void mes_ayo_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,7 +75,7 @@ namespace Farmacia.Gui
             bool selected = false;
             int selected_index = -1;
             Data.MesAyo selected_value = null;
-            if (mes_ayo.Selected)
+            if (mes_ayo.SelectedItem != null)
             {
                 selected = true;
                 selected_value = (Data.MesAyo)mes_ayo.SelectedItem;
@@ -94,7 +110,7 @@ namespace Farmacia.Gui
                     selecting = false;
                 }
             }
-            if (mes_ayo.Selected)
+            if (mes_ayo.SelectedItem != null)
             {
                 source = Data.Venta.Get();
                 IEnumerable<Data.Venta> enumerable = source;
@@ -106,7 +122,7 @@ namespace Farmacia.Gui
         private void Venta_Load(object sender, EventArgs e)
         {
             dgvVenta.AutoGenerateColumns = false;
-            colCliente.DataSource = Data.Proveedor.Get();
+            colCliente.DataSource = Data.Cliente.Get();
             colCliente.DisplayMember = "Nombre";
             colCliente.ValueMember = "IdCliente";
             LoadSource();

@@ -101,7 +101,10 @@ namespace Farmacia.Gui
         {
             get {
                 IEnumerable<Data.ProductoLote> source = ((IEnumerable<Data.ProductoLote>)dgvProducto.DataSource);
-                return (from Data.ProductoLote pl in source where pl.Detalle.Count > 0 select pl).ToList();
+                if (m_de_venta)
+                    return (from Data.ProductoLote pl in source where pl.Cantidad > 0 select pl).ToList();
+                else
+                    return (from Data.ProductoLote pl in source where pl.Detalle.Count > 0 select pl).ToList();
             }
         }
 

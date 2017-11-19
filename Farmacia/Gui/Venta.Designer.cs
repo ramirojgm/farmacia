@@ -182,8 +182,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.ClientSize = new System.Drawing.Size(1356, 600);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dgvVenta);
+            this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Venta";
             this.Text = "Venta";
